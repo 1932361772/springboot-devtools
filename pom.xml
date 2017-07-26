@@ -22,7 +22,7 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.0.RELEASE</version>
 	</parent>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -34,10 +34,15 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
-		
-		
-		<!-- 最下的是热部署的依赖 -->
+
+		<!-- 阿里巴巴的包fasterjson-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.31</version>
+		</dependency>
+
+		<!-- 以下的是devtools热部署的依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -45,7 +50,7 @@
 			<scope>true</scope>
 		</dependency>
 	</dependencies>
-		
+
 	<build>
 		<plugins>
 			<plugin>
@@ -57,4 +62,8 @@
 			</plugin>
 		</plugins>
 	</build>
+	<!-- 以上和以下之间是devtools热部署的依赖 -->
+	
+	
+	
 </project>
