@@ -35,6 +35,9 @@
 			<scope>test</scope>
 		</dependency>
 		
+		
+		
+		<!-- 最下的是热部署的依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
