@@ -14,6 +14,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+	<!-- 	<thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
+		<thymelead-layout-diallect.version>2.0.0</thymelead-layout-diallect.version> -->
+		
 	</properties>
 	<parent>
 		<!-- <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-parent</artifactId> 
@@ -34,8 +37,23 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!--添加thymeleaf的模板文件的依赖 -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
+	
+		<!--	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+	 	<version>1.5.1.RELEASE</version>
+		</dependency> 
+ -->
 
-		<!-- 阿里巴巴的包fasterjson-->
+
+
+
+
+
+		<!-- 阿里巴巴的包fasterjson -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
@@ -63,7 +81,7 @@
 		</plugins>
 	</build>
 	<!-- 以上和以下之间是devtools热部署的依赖 -->
-	
-	
-	
+
+
+
 </project>
