@@ -37,17 +37,17 @@ public class App
 		SpringApplication.run(App.class, args);
 	}
 //用@Bean是不需要继承WebMvcConfigurationSupport
-//	 @Bean
-//	 public HttpMessageConverters fastJsonConverters() {
-//	 FastJsonHttpMessageConverter fastConverter = new
-//	 FastJsonHttpMessageConverter();
-//	 FastJsonConfig fastconfig = new FastJsonConfig();
-//	 fastconfig.setSerializerFeatures(SerializerFeature.PrettyFormat);
-//	 fastConverter.setFastJsonConfig(fastconfig);
-//	 HttpMessageConverter<?> converter = fastConverter;
-//	 return new HttpMessageConverters(converter);
-//	
-//	 }
+	 @Bean
+	 public HttpMessageConverters fastJsonConverters() {
+	 FastJsonHttpMessageConverter fastConverter = new
+	 FastJsonHttpMessageConverter();
+	 FastJsonConfig fastconfig = new FastJsonConfig();
+	 fastconfig.setSerializerFeatures(SerializerFeature.PrettyFormat);
+	 fastConverter.setFastJsonConfig(fastconfig);
+	 HttpMessageConverter<?> converter = fastConverter;
+	 return new HttpMessageConverters(converter);
+	
+	 }
 
 }
 /*

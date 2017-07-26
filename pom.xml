@@ -37,11 +37,19 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<!--添加thymeleaf的模板文件的依赖 -->
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+		
+		
+		
+		<!--添加thymeleaf的模板文件的依赖     失败 -->
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
 		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
 	
-		<!--	<dependency>
+	<!-- 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 	 	<version>1.5.1.RELEASE</version>
