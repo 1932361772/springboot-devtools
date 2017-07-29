@@ -34,48 +34,43 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<!--添加thymeleaf的模板文件的依赖 联合tomcat-catalina成功 -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-freemarker</artifactId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>1.4.0.RELEASE</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-catalina</artifactId>
+		    <version>8.5.15</version>
 		</dependency>
 
+	<!-- 	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+ -->
 		<!--加入servlet jar包 -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.0.1</version>
 			<scope>provided</scope>
- 		</dependency>
+ 		</dependency> -->
 		<!-- 标签库 -->
-		<dependency>
+	<!-- 	<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
-		</dependency> 
+		</dependency>  -->
 
 	<!-- 	<dependency>
 			<groupId>com.ericsson.research.trap.transports</groupId>
 			<artifactId>http-server-servlet-3.0</artifactId>
 			<version>1.4.1</version>
 		</dependency> -->
-
-		<!--tomcat依赖在spring-boot中容器报错.弃用,该有jetty-->
-<!-- 	 	<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>  -->
-		<!-- tomcat jasper依赖 -->
-	<!--  	<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-		</dependency> 
- -->
-
-		<!--添加thymeleaf的模板文件的依赖 失败 -->
-
-		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-thymeleaf</artifactId> 
-			<version>1.5.1.RELEASE</version> </dependency> -->
 
 
 

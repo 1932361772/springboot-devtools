@@ -48,6 +48,7 @@ public class App
 	public ServletRegistrationBean indexServlet() {
 		ServletRegistrationBean servlet = new ServletRegistrationBean(new IndexServlet());
 		servlet.addUrlMappings("/helloservlet");
+		
 		return servlet;
 	}
 	@Bean
@@ -56,15 +57,16 @@ public class App
 	return listener;
 	
 	}
-//	实现.do .Action的风格 失败,因为要用的Tomcat,而Tomcat启动失败.
-//	@Bean
-//	public ServletRegistrationBean dispatcherRegistration(DispatcherServlet dispatcher) {
-//		ServletRegistrationBean servlet=new ServletRegistrationBean(dispatcher);
-////		servlet.addUrlMappings(".do");
-////		servlet.addUrlMappings(".json");
-//		return servlet;		
-//		
-//	}
+//	实现.do .Action的风格 失败,因为要用的Tomcat,而Tomcat启动失败.<!--添加thymeleaf的模板文件的依赖 联合tomcat-catalina成功 -->
+//	@Bean//打开此处的@Bean其它的servlet会失败.
+	public ServletRegistrationBean dispatcherRegistration(DispatcherServlet dispatcher) {
+		ServletRegistrationBean servlet=new ServletRegistrationBean(dispatcher);
+		servlet.addUrlMappings("*.do");
+		servlet.addUrlMappings("*.json");
+		servlet.addUrlMappings("/*");
+		return servlet;		
+		
+	}
 	
 	
 	

@@ -1,6 +1,6 @@
-# microservice-provider-user
+# springboot-devtools
 server:
-  port: 7900
+  port: 8080
 
 #debug: true
 
@@ -15,8 +15,8 @@ spring:
     expose-session-attributes: false
     expose-spring-macro-helpers: false
     ##################
-#  thymeleaf:
-#    cache: false # 关闭缓存
+  thymeleaf:
+    cache: false # 关闭缓存
 
 
   mvc:
