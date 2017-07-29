@@ -97,7 +97,7 @@ public class FileUploadController {//  /batch
 	@RequestMapping("/download")
 	public String download(HttpServletResponse response) throws IOException {
 		String filename="POST-NET.gif";
-		String filePath="C://bank//";
+		String filePath="C://bank/"; //"C://bank//"均可.
 		File file=new File(filePath+filename);
 		if (file.exists()) {
 			response.setContentType("application/force-download");//下载时不用打开.
@@ -124,8 +124,5 @@ public class FileUploadController {//  /batch
 		
 		return null;
 	}
-	
-	
-	
 	
 }

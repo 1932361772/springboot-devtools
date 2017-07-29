@@ -24,6 +24,15 @@ spring:
       prefix: /WEB-INF/JSP/
       suffix: .jsp
 
+  mail:
+    host: smtp.163.com
+    username: 13103843391@163.com 
+    password:  #此处登入用的密码是网易的第三方授权码,不是邮箱密码.在邮箱163邮箱页面上更改授权码.(设置-->客户端授权密码-->重置授权码-->手机短信验证)
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+  
       
       
       
