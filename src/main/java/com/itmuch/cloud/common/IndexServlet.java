@@ -15,8 +15,8 @@ public class IndexServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.err.println("------------IndexServlet doGet.......");	// TODO Auto-generated method stub
 		resp.getWriter().print("hello word!!!!!!!!!");
-		resp.getWriter().flush();
-		resp.getWriter().close();
+//		resp.getWriter().flush();
+//		resp.getWriter().close();//此处不能关闭否则其它的servlet会失败.没有其它servlet时可以关闭.
 		// super.doGet(req, resp);
 	}
 
