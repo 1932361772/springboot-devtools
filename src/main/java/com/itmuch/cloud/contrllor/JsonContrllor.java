@@ -9,7 +9,7 @@ import com.itmuch.cloud.enties.User;
 
 @RestController
 public class JsonContrllor {
-	@RequestMapping("/getUser")
+	@RequestMapping("/getuser")
 	public User getUser() {
 		User user = new User();
 		user.setUserId("01");

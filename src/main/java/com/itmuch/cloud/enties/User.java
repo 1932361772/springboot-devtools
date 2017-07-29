@@ -2,13 +2,13 @@ package com.itmuch.cloud.enties;
 
 import java.util.Date;
 
-import com.alibaba.fastjson.annotation.JSONField;
+//import com.alibaba.fastjson.annotation.JSONField;
 
 public class User {
 
 	private String userId;
 	private String userName;
-	@JSONField(format="yyyy-MM-dd")
+//	@JSONField(format="yyyy-MM-dd")
 	private Date createDate;
 
 	public String getUserId() {

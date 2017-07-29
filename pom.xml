@@ -14,17 +14,14 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-	<!-- 	<thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
-		<thymelead-layout-diallect.version>2.0.0</thymelead-layout-diallect.version> -->
-		
+
 	</properties>
 	<parent>
-		<!-- <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-parent</artifactId> 
-			<version>1.5.2.RELEASE</version> -->
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.0.RELEASE</version>
 	</parent>
+
 
 	<dependencies>
 		<dependency>
@@ -37,24 +34,48 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
-		
-		
-		
-		<!--添加thymeleaf的模板文件的依赖     失败 -->
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
-	
-	<!-- 		<dependency>
+
+		<!--加入servlet jar包 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+ 		</dependency>
+		<!-- 标签库 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency> 
+
+	<!-- 	<dependency>
+			<groupId>com.ericsson.research.trap.transports</groupId>
+			<artifactId>http-server-servlet-3.0</artifactId>
+			<version>1.4.1</version>
+		</dependency> -->
+
+		<!--tomcat依赖在spring-boot中容器报错.弃用,该有jetty-->
+<!-- 	 	<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-	 	<version>1.5.1.RELEASE</version>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>  -->
+		<!-- tomcat jasper依赖 -->
+	<!--  	<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency> 
  -->
+
+		<!--添加thymeleaf的模板文件的依赖 失败 -->
+
+		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-thymeleaf</artifactId> 
+			<version>1.5.1.RELEASE</version> </dependency> -->
 
 
 

@@ -14,14 +14,15 @@ spring:
     expose-request-attributes: false
     expose-session-attributes: false
     expose-spring-macro-helpers: false
+    ##################
 #  thymeleaf:
 #    cache: false # 关闭缓存
 
 
-
-
-
-
+  mvc:
+    view:
+      prefix: /WEB-INF/JSP/
+      suffix: .jsp
 
       
       
