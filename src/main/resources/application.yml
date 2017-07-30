@@ -56,7 +56,6 @@ spring:
 spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQLInnoDBDialect
 
 
-#开始springdata jpa 3
 
 
 

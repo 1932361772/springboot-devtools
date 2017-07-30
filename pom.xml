@@ -85,6 +85,13 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		
+		<!--jdbc依赖  和springbootdatajpa可以任选一也可以多选           -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+				
+		
  
 		<!--加入servlet jar包 -->
 	<!-- 	<dependency>

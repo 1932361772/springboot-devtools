@@ -10,9 +10,13 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import com.itmuch.cloud.bean.Grade;
+import com.itmuch.cloud.bean.JdbcGrade;
+import com.itmuch.cloud.jdbcdao.GradeDao;
 import com.itmuch.cloud.repository.GradeRepository;
 import com.itmuch.cloud.repository.GradeRepository2;
 import com.itmuch.cloud.repository.GradeRepository3;
+
+import antlr.collections.List;
 
 @Service
 public class GradeService {
@@ -22,6 +26,8 @@ public class GradeService {
 	private GradeRepository2 gradeRepository2;
 	@Resource
 	private GradeRepository3 gradeRepository3;
+	@Resource
+	private GradeDao gradeDao;// jdbc
 
 	public Grade findByGradeNm(String gradeNm) {
 
@@ -43,31 +49,40 @@ public class GradeService {
 	}
 
 	public Iterable<Grade> getAll() {
-//		return gradeRepository3.findAll((Iterable<Integer>) new PageRequest(0, 3));//失败.
+		// return gradeRepository3.findAll((Iterable<Integer>) new
+		// PageRequest(0, 3));//失败.
 		return gradeRepository3.findAll();
 	}
+
 	public Iterable<Grade> getAll2() {
-//		return gradeRepository3.findAll(new Sort(Sort.Direction.DESC,"teacherId"));
+		// return gradeRepository3.findAll(new
+		// Sort(Sort.Direction.DESC,"teacherId"));
 		return gradeRepository3.findAll();
+
+	}
+
+	// jdbc
+	public JdbcGrade findByGradeNmJdbc(String gradeNm) {
+
+		return gradeDao.findByGradeNmJdbc(gradeNm);
+	}
+
+	@Transactional // 切事务
+	public JdbcGrade create(final JdbcGrade jdbcGrade) {
+		return gradeDao.create(jdbcGrade);
+
+	}
+
+	public Object jdbcfindAll() {
+		return gradeDao.jdbcfindAll();
+
+	}
+	public void jdbcdelete(final Integer id){
+		gradeDao.jdbcdelete(id);
 		
 	}
-	
-	
-	
+	public void jdbcupdate(JdbcGrade jdbcGrade) {
+	 	gradeDao.jdbcupdate(jdbcGrade);
+	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
