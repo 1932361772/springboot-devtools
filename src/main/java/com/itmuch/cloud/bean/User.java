@@ -1,4 +1,4 @@
-package com.itmuch.cloud.enties;
+package com.itmuch.cloud.bean;
 
 import java.util.Date;
 

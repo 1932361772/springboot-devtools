@@ -67,10 +67,21 @@ public class App
 		return servlet;		
 		
 	}
+//	以@Bean的方式配置Tomcat 此处用的是Tomcat-calalina 依赖,没有Tomcat的下面的类,所有报错.
 	
-	
-	
-	
+/*	@Bean
+	public EnabledservletContainerFactory servleContainer() {
+		EnabledservletContainerFactory factory=new EnabledservletContainerFactory();
+		factory.setport(7777);
+		return factory;
+	}*/
+//	以@Bean的方式配置Tomcat 此处用的是Tomcat-calalina 依赖,没有jetty的下面的类,所有报错.	
+/*	@Bean
+	public EnableServletContainerFactory servletContainer() {
+		JettyEnableServletcontainerFactory factory=new JettyEnableServletcontainerFactory();
+		factory.setport(7777);
+		return factory;
+	}*/
 	
 	
 //用@Bean是不需要继承WebMvcConfigurationSupport

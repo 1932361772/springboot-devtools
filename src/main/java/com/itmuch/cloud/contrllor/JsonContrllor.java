@@ -5,7 +5,7 @@ import java.util.Date;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.itmuch.cloud.enties.User;
+import com.itmuch.cloud.bean.User;
 
 @RestController
 public class JsonContrllor {

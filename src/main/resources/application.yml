@@ -1,6 +1,8 @@
 # springboot-devtools
 server:
   port: 8080
+#  context-path: /springboot #工程名称,访问路径http://localhost:8080/springboot/indexjsp;不配置时http://localhost:8080/indexjsp
+  
 
 #debug: true
 
@@ -18,7 +20,6 @@ spring:
   thymeleaf:
     cache: false # 关闭缓存
 
-
   mvc:
     view:
       prefix: /WEB-INF/JSP/
@@ -27,12 +28,53 @@ spring:
   mail:
     host: smtp.163.com
     username: 13103843391@163.com 
-    password:  #此处登入用的密码是网易的第三方授权码,不是邮箱密码.在邮箱163邮箱页面上更改授权码.(设置-->客户端授权密码-->重置授权码-->手机短信验证)
+    password: qq1039755127#需要填写授权码否则mail发送失败.#此处登入用的密码是网易的第三方授权码,不是邮箱密码.在邮箱163邮箱页面上更改授权码.(设置-->客户端授权密码-->重置授权码-->手机短信验证)
     properties:
       mail.smtp.auth: true
       mail.smtp.starttls.enable: true
       mail.smtp.starttls.required: true
-  
       
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 
+    driver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      max-active: 20
+      max-idle: 8
+      min-idle: 8
+      initial-size: 10
+      
+  jpa:
+    database: mysql
+    show-sql: true
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQLInnoDBDialect
+
+
+#开始springdata jpa 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
       
       
