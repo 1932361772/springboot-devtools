@@ -3,6 +3,7 @@ package com.itmuch.cloud;
 import java.util.EventListener;
 import java.util.List;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
@@ -31,6 +32,7 @@ import com.itmuch.cloud.common.IndexServlet;
 //第三种app========================================================================================================
 
 @SpringBootApplication
+@MapperScan("com.itmuch.cloud.jdbcdao")//mybatis的mapper所在的包名.启动的时候加载.
 //@ServletComponentScan//添加这个注解才会自动扫描自定义的listener,filter,servlet
 public class App
 {
